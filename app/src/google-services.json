@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "166267978699",
+    "project_id": "write-out-7ac26",
+    "storage_bucket": "write-out-7ac26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166267978699:android:54afe7e4acd70437592c4e",
+        "android_client_info": {
+          "package_name": "com.pexcy.write_out"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "166267978699-gck00qiru3jrhdsdp72r8hpm5g2pqm1u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5DzJtf-JqxCDvcA7mh-Kr3KksdUzu4fs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "166267978699-gck00qiru3jrhdsdp72r8hpm5g2pqm1u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
