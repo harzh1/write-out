@@ -32,12 +32,7 @@ public class login_frag extends AppCompatActivity {
         passwordd=findViewById(R.id.password);
         signinbutton=findViewById(R.id.signinbutton);
         progressDialog=new ProgressDialog(this);
-        signinbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Login();
-            }
-        });
+        signinbutton.setOnClickListener(v -> Login());
     }
 
 
@@ -64,7 +59,7 @@ public class login_frag extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     Toast.makeText(login_frag.this, "Successfully Login",Toast.LENGTH_LONG).show();
-                    Intent intent4=new Intent(login_frag.this,MainActivity.class);
+                    Intent intent4=new Intent(login_frag.this,dashbord.class);
                     startActivity(intent4);
                     finish();
                 }
