@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class login_frag extends AppCompatActivity {
     private EditText emaill, passwordd;
@@ -27,12 +28,13 @@ public class login_frag extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_frag);
-        firebaseAuth=FirebaseAuth.getInstance();
-        emaill=findViewById(R.id.email);
-        passwordd=findViewById(R.id.password);
-        signinbutton=findViewById(R.id.signinbutton);
-        progressDialog=new ProgressDialog(this);
+        firebaseAuth = FirebaseAuth.getInstance();
+        emaill = findViewById(R.id.email);
+        passwordd = findViewById(R.id.password);
+        signinbutton = findViewById(R.id.signinbutton);
+        progressDialog = new ProgressDialog(this);
         signinbutton.setOnClickListener(v -> Login());
+
     }
 
 
@@ -71,9 +73,20 @@ public class login_frag extends AppCompatActivity {
         });
 
     }
+
     private Boolean isVallidEmail(CharSequence target){
         return (!TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches());
 
     }
+    @Override
+    public  void onStart(){
+
+        super.onStart();
+        FirebaseUser CurrentUser =firebaseAuth.getCurrentUser();
+        if(CurrentUser !=null)
+        startActivity(new Intent(login_frag.this,dashbord.class));
+    }
+
+
 
 }

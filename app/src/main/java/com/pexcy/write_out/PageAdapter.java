@@ -19,15 +19,10 @@ public class PageAdapter extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        switch (position){
-            case 0 : return new frag_fav();
-            case 1 : return new frag_mine();
-            case 2 : return new frag_other();
-            default:return  null;
+        return fragmentArrayList.get(position);
+
 
         }
-
-    }
 
     @Override
     public int getCount() {
@@ -45,6 +40,6 @@ public class PageAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
 
 
-        return super.getPageTitle(position);
+        return fragmentTitle.get(position);
     }
 }

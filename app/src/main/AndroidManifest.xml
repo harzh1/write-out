@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Writeout">
         <activity
+            android:name=".article_write"
+            android:exported="false" />
+        <activity
             android:name=".dashbord"
             android:exported="false" />
         <activity
